@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商家管理</title>
+    <script>
+        function navigateTo(path) {
+            window.location.href = path;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>商家管理</h1>
+        <nav>
+            <ul>
+                <li onclick="navigateTo('/商家管理');">商家列表</li>
+                <li onclick="navigateTo('/商家入驻');">入驻申请</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="商家列表">
+            <h2>商家列表</h2>
+            <table>
+                <tr>
+                    <th>商家名称</th>
+                    <th>地址</th>
+                    <th>联系方式</th>
+                    <th>操作</th>
+                </tr>
+                <!-- 商家数据将通过后端动态插入 -->
+            </table>
+        </section>
+        <section id="商家入驻申请" style="display: none;">
+            <h2>商家入驻申请</h2>
+            <form action="/商家入驻申请" method="post">
+                <input type="text" name="business_name" placeholder="输入商家名称">
+                <input type="text" name="address" placeholder="输入地址">
+                <input type="text" name="contact" placeholder="输入联系方式">
+                <button type="submit">提交申请</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 我们的平台</p>
+    </footer>
+    <script>
+        // 默认显示商家列表
+        navigateTo('/商家管理');
+    </script>
+</body>
+</html>
+
+</body>
+</html>

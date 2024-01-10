@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <script>
+        function navigateTo(path) {
+            window.location.href = path;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>用户管理</h1>
+        <nav>
+            <ul>
+                <li onclick="navigateTo('/用户管理');">个人信息</li>
+                <li onclick="navigateTo('/用户预订');">我的预订</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="个人信息">
+            <h2>个人信息</h2>
+            <form action="/用户信息更新" method="post">
+                <input type="text" name="username" placeholder="用户名">
+                <input type="email" name="email" placeholder="邮箱">
+                <input type="password" name="password" placeholder="密码">
+                <button type="submit">保存更改</button>
+            </form>
+        </section>
+        <section id="我的预订" style="display: none;">
+            <h2>我的预订</h2>
+            <table>
+                <tr>
+                    <th>预订编号</th>
+                    <th>预订日期</th>
+                    <th>预订状态</th>
+                    <th>操作</th>
+                </tr>
+                <!-- 预订数据将通过后端动态插入 -->
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 我们的平台</p>
+    </footer>
+    <script>
+        // 默认显示个人信息
+        navigateTo('/用户管理');
+    </script>
+</body>
+</html>
+
